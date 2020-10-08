@@ -1,0 +1,541 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/sortby_back">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/sortby_back"
+            android:orientation="vertical"
+          >
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="60dp"
+                android:layout_height="2dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="8dp"
+                app:cardBackgroundColor="@color/colorGrey"
+                app:cardCornerRadius="4dp"></androidx.cardview.widget.CardView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/gilroy_semibold"
+                android:text="Filter"
+                android:textAlignment="center"
+                android:textColor="@color/lightBlack"
+                android:textSize="18sp"
+                android:textStyle="normal|bold"></TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:fontFamily="@font/gilroy_semibold"
+                android:text="Price Range"
+                android:textColor="@color/lightBlack"
+                android:textSize="16sp"
+                android:textStyle="normal|bold"></TextView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/colorWhite"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/tv_range_seek_min"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/gilroy_light"
+                        android:background="@color/colorWhite"
+                        android:text="Rs 0"
+                        android:textColor="@color/lightBlack"></TextView>
+
+                    <TextView
+                        android:id="@+id/tv_range_seek_max"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="1"
+                        android:background="@color/colorWhite"
+                        android:gravity="end"
+                        android:fontFamily="@font/gilroy_light"
+                        android:text="Rs 200"
+                        android:textColor="@color/lightBlack"></TextView>
+                </LinearLayout>
+
+                <com.innovattic.rangeseekbar.RangeSeekBar
+                    android:id="@+id/filter_range_seekBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorWhite"
+                    app:rsb_maxThumbDrawable="@drawable/thumb_seekbar"
+                    app:rsb_minRange="10"
+                    app:rsb_minThumbDrawable="@drawable/thumb_seekbar"
+                    app:rsb_minThumbOffsetHorizontal="-2dp"
+                    app:rsb_trackColor="@color/colorGrey"
+                    app:rsb_trackSelectedColor="@color/colorRed"
+                    app:rsb_trackSelectedThickness="6dp"
+                    app:rsb_trackThickness="1dp"></com.innovattic.rangeseekbar.RangeSeekBar>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.2dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/colorGrey"></View>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorLighWhite"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:fontFamily="@font/gilroy_semibold"
+                    android:text="Color"
+                    android:textColor="@color/lightBlack"
+                    android:textSize="16sp"
+                    android:textStyle="bold"></TextView>
+
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_color_filter_list"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorWhite"></androidx.recyclerview.widget.RecyclerView>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.2dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/colorGrey"></View>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorLighWhite"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:fontFamily="@font/gilroy_semibold"
+                    android:text="Sizes"
+                    android:textColor="@color/lightBlack"
+                    android:textSize="16sp"
+                    android:textStyle="bold"></TextView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/colorWhite"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="5dp">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card_filter_size_xs"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="20dp"
+                        android:layout_marginBottom="4dp"
+                        android:layout_marginTop="4dp"
+                        android:outlineSpotShadowColor="@color/colorGrey"
+                        android:padding="2dp"
+                        app:cardCornerRadius="5dp">
+
+                        <TextView
+                            android:id="@+id/tv_filter_size_xs"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/gilroy_light"
+                            android:padding="14dp"
+                            android:text="XS"
+                            android:textColor="@color/lightBlack"></TextView>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card_filter_size_s"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginBottom="4dp"
+                        android:layout_marginTop="4dp"
+                        android:outlineSpotShadowColor="@color/colorGrey"
+                        android:padding="2dp"
+                        app:cardCornerRadius="5dp">
+
+                        <TextView
+                            android:id="@+id/tv_filter_size_s"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:padding="14dp"
+                            android:fontFamily="@font/gilroy_light"
+                            android:text=" S "
+                            android:textColor="@color/lightBlack"></TextView>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card_filter_size_m"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginBottom="4dp"
+                        android:layout_marginTop="4dp"
+                        android:outlineSpotShadowColor="@color/colorGrey"
+                        android:padding="2dp"
+                        app:cardCornerRadius="5dp">
+
+                        <TextView
+                            android:id="@+id/tv_filter_size_m"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:padding="14dp"
+                            android:fontFamily="@font/gilroy_light"
+                            android:text=" M "
+                            android:textColor="@color/lightBlack"></TextView>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card_filter_size_l"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginBottom="4dp"
+                        android:layout_marginTop="4dp"
+                        android:outlineSpotShadowColor="@color/colorGrey"
+                        android:padding="2dp"
+                        app:cardCornerRadius="5dp">
+
+                        <TextView
+                            android:id="@+id/tv_filter_size_l"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/gilroy_light"
+                            android:padding="14dp"
+                            android:text=" L "
+                            android:textColor="@color/lightBlack"></TextView>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card_filter_size_xl"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="4dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginStart="10dp"
+                        android:outlineSpotShadowColor="@color/colorGrey"
+                        android:padding="2dp"
+                        app:cardCornerRadius="5dp">
+
+                        <TextView
+                            android:id="@+id/tv_filter_size_xl"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:padding="14dp"
+                            android:fontFamily="@font/gilroy_light"
+                            android:text="XL"
+                            android:textColor="@color/lightBlack"></TextView>
+                    </androidx.cardview.widget.CardView>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorLighWhite"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:fontFamily="sans-serif-light"
+                    android:text="Catogory"
+                    android:textColor="@color/lightBlack"
+                    android:textSize="16sp"
+                    android:textStyle="bold"></TextView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:background="@color/colorWhite"
+                    android:orientation="vertical"
+                    android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:weightSum="9"
+
+                    android:background="@color/colorWhite"
+                    android:paddingTop="10dp"
+                    android:paddingBottom="5dp">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card_filter_category_all"
+                        android:layout_width="0dp"
+                        android:layout_weight="3"
+                        android:elevation="1dp"
+                        android:layout_marginBottom="4dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_height="match_parent"
+                        android:outlineSpotShadowColor="@color/colorGrey"
+                        android:padding="2dp"
+                        app:cardCornerRadius="5dp">
+
+                        <TextView
+                            android:id="@+id/tv_filter_category_all"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/gilroy_light"
+                            android:text="All"
+                            android:textColor="@color/lightBlack"></TextView>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card_filter_category_women"
+                        android:layout_width="0dp"
+                        android:layout_weight="3"
+                        android:layout_marginBottom="4dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_height="match_parent"
+                        android:outlineSpotShadowColor="@color/colorGrey"
+                        android:padding="2dp"
+                        app:cardCornerRadius="5dp">
+
+                        <TextView
+                            android:id="@+id/tv_filter_category_women"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:text="Women"
+                            android:fontFamily="@font/gilroy_light"
+                            android:textColor="@color/lightBlack"></TextView>
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/card_filter_category_men"
+                        android:layout_width="0dp"
+                        android:layout_weight="3"
+                        android:layout_marginBottom="4dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_height="match_parent"
+                        android:outlineSpotShadowColor="@color/colorGrey"
+                        android:padding="2dp"
+                        app:cardCornerRadius="5dp">
+
+                        <TextView
+                            android:id="@+id/tv_filter_category_men"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:padding="14dp"
+                            android:text="Men"
+                            android:fontFamily="@font/gilroy_light"
+                            android:textColor="@color/lightBlack"></TextView>
+                    </androidx.cardview.widget.CardView>
+
+
+
+
+
+                </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="9"
+                        android:layout_marginEnd="5dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@color/colorWhite"
+                        android:paddingBottom="5dp">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/card_filter_category_boys"
+                            android:layout_width="0dp"
+                            android:layout_weight="3"
+                            android:layout_marginBottom="4dp"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginStart="10dp"
+                            android:elevation="1dp"
+                            android:layout_height="match_parent"
+                            android:outlineSpotShadowColor="@color/colorGrey"
+                            android:padding="2dp"
+                            app:cardCornerRadius="5dp">
+
+                            <TextView
+                                android:id="@+id/tv_filter_category_boys"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/gilroy_light"
+                                android:text="Boys"
+                                android:textColor="@color/lightBlack"></TextView>
+                        </androidx.cardview.widget.CardView>
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/card_filter_category_girls"
+                            android:layout_width="0dp"
+                            android:layout_weight="3"
+                            android:layout_marginBottom="4dp"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_height="match_parent"
+                            android:outlineSpotShadowColor="@color/colorGrey"
+                            android:padding="2dp"
+                            app:cardCornerRadius="5dp">
+
+                            <TextView
+                                android:id="@+id/tv_filter_category_girls"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:layout_gravity="center"
+                                android:fontFamily="@font/gilroy_light"
+                                android:padding="14dp"
+                                android:text="Girls"
+                                android:textColor="@color/lightBlack"></TextView>
+                        </androidx.cardview.widget.CardView>
+
+
+
+
+
+
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/cl_filter_brand"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp">
+
+                <TextView
+                    android:id="@+id/tv_filter_brand"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/promocodes"
+                    android:fontFamily="@font/gilroy_semibold"
+                    android:textColor="@color/lightBlack"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"></TextView>
+
+                <TextView
+                    android:id="@+id/tv_filter_brand_names"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:fontFamily="@font/gilroy_light"
+                    android:text="addidas,silver,jack and jones"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/tv_filter_brand"></TextView>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/ic_baseline_chevron_right_24"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"></ImageView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:weightSum="2"
+                android:background="@color/colorWhite"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tv_filter_discard_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="6dp"
+                    android:background="@drawable/discard_back"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:fontFamily="@font/gilroy_semibold"
+                    android:textColor="@color/colorBlack"
+                    android:text="@string/discard"></TextView>
+
+                <TextView
+                    android:id="@+id/tv_filter_apply_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/gilroy_semibold"
+                    android:layout_margin="6dp"
+                    android:background="@drawable/apply_back"
+                    android:gravity="center"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorWhite"
+                    android:text="@string/apply"></TextView>
+
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

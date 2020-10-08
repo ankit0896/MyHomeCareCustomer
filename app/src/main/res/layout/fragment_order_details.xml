@@ -1,0 +1,364 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".view.fragment.OrderDetailsFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="3.4">
+
+                <ImageView
+                    android:id="@+id/iv_ods_back"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:src="@drawable/ic_round_chevron_left_24"></ImageView>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="3"
+                    android:text="Order Details"
+                    android:textAlignment="center"
+                    android:fontFamily="@font/gilroy_bold"
+                    android:textColor="@color/lightBlack"
+                    android:textSize="18sp"
+                    android:textStyle="bold"></TextView>
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.2"
+                    android:src="@drawable/ic_search_black_24"></ImageView>
+            </LinearLayout>
+
+        </androidx.appcompat.widget.Toolbar>
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/tv_ods_orderNumber"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="14dp"
+                        android:layout_marginEnd="10dp"
+                        android:fontFamily="@font/gilroy_semibold"
+                        android:layout_weight="1"
+                        android:text="Order No1947034"
+                        android:textColor="@color/lightBlack"
+                        android:textSize="16sp"
+                        android:textStyle="bold"></TextView>
+
+                    <TextView
+                        android:id="@+id/tv_ods_orderDate"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="14dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/gilroy_light"
+                        android:text="05-12-2019"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/colorGrey"
+                        android:textSize="16sp"></TextView>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:weightSum="4">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="14dp"
+                        android:layout_weight="3">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Tracking number:"
+                            android:fontFamily="@font/gilroy_semibold"
+                            android:textColor="@color/colorGrey"
+                            android:textSize="14sp"></TextView>
+
+                        <TextView
+                            android:id="@+id/tv_ods_trackingNumber"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="5dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/gilroy_light"
+                            android:text="IW3475453455"
+                            android:textColor="@color/lightBlack"
+                            android:textSize="14sp"></TextView>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="1"
+                        android:text="Delivered"
+                        android:fontFamily="@font/gilroy_light"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/colorGreen"
+                        android:textSize="14sp"></TextView>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_ods_quantity_items"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginTop="10dp"
+                    android:text="3 items"
+                    android:fontFamily="@font/gilroy_semibold"
+                    android:textColor="@color/lightBlack"
+                    android:textSize="16sp"></TextView>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rv_od_listView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="10dp"></androidx.recyclerview.widget.RecyclerView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginTop="24dp"
+                    android:text="Order Information"
+                    android:fontFamily="@font/gilroy_semibold"
+                    android:textColor="@color/lightBlack"></TextView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="14dp"
+                    android:orientation="horizontal"
+                    android:weightSum="5">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.6"
+                        android:text="Shipping Address:"
+                        android:fontFamily="@font/gilroy_semibold"
+                        android:textColor="@color/colorGrey"
+                        android:textSize="14sp"></TextView>
+
+
+                    <TextView
+                        android:id="@+id/tv_ods_address"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3.4"
+                        android:fontFamily="@font/gilroy_semibold"
+                        android:text="3 Newbridge Court ,chino Hills CA 91709,United States"
+                        android:textColor="@color/lightBlack"
+                        android:textSize="16sp"></TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="14dp"
+                    android:orientation="horizontal"
+                    android:weightSum="5">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.6"
+                        android:text="Payment method:"
+                        android:fontFamily="@font/gilroy_semibold"
+                        android:textColor="@color/colorGrey"
+                        android:textSize="14sp"></TextView>
+
+                    <ImageView
+                        android:layout_width="0dp"
+                        android:layout_weight=".6"
+                        android:layout_height="32dp"
+                        android:src="@drawable/mastercard"></ImageView>
+
+                    <TextView
+                        android:id="@+id/tv_ods_payment_method"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/gilroy_semibold"
+                        android:layout_weight="2.8"
+                        android:text="**** **** **** 3947"
+                        android:textColor="@color/lightBlack"
+                        android:textSize="16sp"></TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="14dp"
+                    android:orientation="horizontal"
+                    android:weightSum="5">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.6"
+                        android:fontFamily="@font/gilroy_semibold"
+                        android:text="Delivery method:"
+                        android:textColor="@color/colorGrey"
+                        android:textSize="14sp"></TextView>
+
+                    <TextView
+                        android:id="@+id/tv_ods_delivery_method"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3.4"
+                        android:fontFamily="@font/gilroy_semibold"
+                        android:text="FedEx, 3 days, 15Rs"
+                        android:textColor="@color/lightBlack"
+                        android:textSize="16sp"></TextView>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="14dp"
+                    android:orientation="horizontal"
+                    android:weightSum="5">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.6"
+                        android:fontFamily="@font/gilroy_semibold"
+                        android:text="Discount:"
+                        android:textColor="@color/colorGrey"
+                        android:textSize="14sp"></TextView>
+
+
+                    <TextView
+                        android:id="@+id/tv_ods_discount"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3.4"
+                        android:fontFamily="@font/gilroy_semibold"
+                        android:text="10%, Personal promo code"
+                        android:textColor="@color/lightBlack"
+                        android:textSize="16sp"></TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="14dp"
+                    android:orientation="horizontal"
+                    android:weightSum="5">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.6"
+                        android:fontFamily="@font/gilroy_semibold"
+                        android:text="Total Amount:"
+                        android:textColor="@color/colorGrey"
+                        android:textSize="14sp"></TextView>
+
+                    <TextView
+                        android:id="@+id/tv_ods_totalAmount"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="3.4"
+                        android:text="133Rs"
+                        android:fontFamily="@font/gilroy_semibold"
+                        android:textColor="@color/lightBlack"
+                        android:textSize="16sp"></TextView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/odlinearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="14dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="14dp"
+                    android:layout_marginBottom="40dp"
+                    android:background="@color/colorWhite"
+                    android:gravity="center"
+                    android:weightSum="2">
+
+                    <TextView
+                        android:id="@+id/tv_ods_reorder_btn"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="6dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/discard_back"
+                        android:gravity="center"
+                        android:padding="8dp"
+                        android:text="@string/reorder"
+                        android:fontFamily="@font/gilroy_semibold"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorBlack"></TextView>
+
+                    <TextView
+                        android:id="@+id/tv_ods_leavefeedback_btn"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="6dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/apply_back"
+                        android:gravity="center"
+                        android:fontFamily="@font/gilroy_semibold"
+                        android:padding="8dp"
+                        android:text="@string/leaveFeedBack"
+                        android:textAlignment="center"
+                        android:textColor="@color/colorWhite"></TextView>
+
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+
+    android:background="@drawable/bottom_nav_back"
+    android:orientation="vertical">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="60dp"
+        android:layout_height="6dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="8dp"
+        app:cardBackgroundColor="@color/colorGrey"
+        app:cardCornerRadius="4dp"></androidx.cardview.widget.CardView>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/gilroy_semibold"
+        android:layout_marginTop="16dp"
+        android:text="@string/selectSize"
+        android:textColor="@color/lightBlack"
+        android:textSize="22sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:weightSum="7">
+
+
+        <TextView
+            android:id="@+id/tv_ss_xs"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="@drawable/select_size_back"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="XS"
+            android:fontFamily="@font/gilroy_light"
+            android:textAlignment="center"
+            android:textColor="@color/lightBlack"
+            android:textSize="18sp"></TextView>
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"></View>
+
+
+        <TextView
+            android:id="@+id/tv_ss_s"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:background="@drawable/select_size_back"
+            android:gravity="center"
+            android:padding="10dp"
+            android:fontFamily="@font/gilroy_light"
+            android:text="S"
+            android:textAlignment="center"
+            android:textColor="@color/lightBlack"
+            android:textSize="18sp"></TextView>
+
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"></View>
+
+
+        <TextView
+            android:id="@+id/tv_ss_m"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/gilroy_light"
+            android:layout_weight="2"
+            android:background="@drawable/select_size_back"
+            android:padding="10dp"
+            android:text="M"
+            android:textAlignment="center"
+            android:textColor="@color/lightBlack"
+            android:textSize="18sp"></TextView>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="10dp"
+        android:weightSum="7">
+
+
+        <TextView
+            android:id="@+id/tv_ss_l"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:fontFamily="@font/gilroy_light"
+            android:background="@drawable/select_size_back"
+            android:padding="10dp"
+            android:text="L"
+            android:textAlignment="center"
+            android:textColor="@color/lightBlack"
+            android:textSize="18sp"></TextView>
+
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"></View>
+
+
+        <TextView
+            android:id="@+id/tv_ss_xl"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:background="@drawable/select_size_back"
+            android:padding="10dp"
+            android:text="XL"
+            android:textAlignment="center"
+            android:fontFamily="@font/gilroy_light"
+            android:textColor="@color/lightBlack"
+            android:textSize="18sp"></TextView>
+
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"></View>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:fontFamily="@font/gilroy_light"
+        android:drawableRight="@drawable/ic_black_chevron_right_24"
+        android:text="Size info"
+        android:textColor="@color/lightBlack"
+        android:textSize="18sp"></TextView>
+
+</LinearLayout>

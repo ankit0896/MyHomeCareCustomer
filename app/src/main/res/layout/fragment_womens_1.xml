@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/colorLighWhite"
+    tools:context=".view.fragment.WomensFragment_1">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:background="@color/colorLighWhite"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_wt1_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_round_chevron_left_24"
+          ></ImageView>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/ic_search_black_24"></ImageView>
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/womenstops"
+        android:fontFamily="@font/gilroy_bold"
+        android:textColor="@color/lightBlack"
+        android:background="@color/colorLighWhite"
+        android:textStyle="bold"
+        android:textSize="32sp"
+        android:layout_marginStart="12dp"></TextView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_fragment_womens_filter_items"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorLighWhite"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="5dp"
+        android:scrollbars="horizontal"></androidx.recyclerview.widget.RecyclerView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@color/colorLighWhite"
+        android:orientation="horizontal"
+        android:weightSum="3">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@color/colorLighWhite"
+            android:drawableLeft="@drawable/ic_baseline_filter_list_24"
+            android:text="@string/filters"
+            android:fontFamily="@font/gilroy_semibold"
+            android:textColor="@color/colorBlack"></TextView>
+
+
+        <TextView
+            android:id="@+id/tv_filter_low_to_high_wt1"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginStart="4dp"
+            android:layout_weight="1.5"
+            android:fontFamily="@font/gilroy_semibold"
+            android:background="@color/colorLighWhite"
+            android:drawableLeft="@drawable/ic_swap_vert_24"
+            android:text="@string/price"
+            android:textColor="@color/colorBlack"></TextView>
+
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.5"
+            android:gravity="center"
+            android:background="@color/colorLighWhite"
+            android:src="@drawable/ic_category_module_24"></ImageView>
+
+
+    </LinearLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_womens_fragment_1_items"
+        android:layout_width="match_parent"
+        android:background="@color/colorLighWhite"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="20dp"></androidx.recyclerview.widget.RecyclerView>
+
+
+</LinearLayout>

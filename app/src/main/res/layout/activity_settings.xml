@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorLighWhite"
+    tools:context=".view.activity.SettingsActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorLighWhite"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:background="@color/colorLighWhite"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/iv_settings_back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_round_chevron_left_24"></ImageView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/colorLighWhite"
+                android:layout_gravity="end">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/ic_search_black_24"></ImageView>
+            </LinearLayout>
+        </androidx.appcompat.widget.Toolbar>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:fontFamily="@font/gilroy_bold"
+            android:background="@color/colorLighWhite"
+            android:text="@string/settings"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@color/lightBlack"
+            android:textSize="28sp"
+            android:textStyle="bold"></TextView>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:fontFamily="@font/gilroy_semibold"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorLighWhite"
+            android:text="@string/personalInformation"
+            android:textColor="@color/lightBlack"
+            android:textStyle="bold"></TextView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="12dp"
+            android:background="@color/colorWhite">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_setting_fullname"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="10dp"
+                app:hintTextColor="@color/colorGrey"
+                android:hint="@string/fullname"
+                android:padding="5dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tie_setting_fullname"
+                    android:layout_width="match_parent"
+                    android:fontFamily="@font/gilroy_light"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:paddingTop="4dp"
+                    android:singleLine="true"
+                    android:textSize="16sp"></com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="6dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="12dp"
+            android:background="@color/colorWhite">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_setting_dob"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="10dp"
+                android:hint="@string/dob"
+                app:hintTextColor="@color/colorGrey"
+                android:padding="5dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tie_setting_dob"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:paddingTop="4dp"
+                    android:singleLine="true"
+                    android:fontFamily="@font/gilroy_light"
+                    android:text="12/12/1989"
+                    android:textSize="16sp"></com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/colorLighWhite"
+            android:layout_marginEnd="10dp"
+            android:weightSum="2">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/password"
+                android:fontFamily="@font/gilroy_semibold"
+                android:background="@color/colorLighWhite"
+                android:textColor="@color/lightBlack"
+                android:textSize="18sp"
+                android:textStyle="bold"></TextView>
+
+            <TextView
+                android:id="@+id/tv_setting_password_change"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@color/colorLighWhite"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="12dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/change"
+                android:textAlignment="textEnd"
+                android:fontFamily="@font/gilroy_light"
+                android:textColor="@color/colorGrey"
+                android:textSize="14sp"
+                tools:ignore="RtlCompat"></TextView>
+        </LinearLayout>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="12dp"
+            android:background="@color/colorWhite">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_login_password"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="10dp"
+                app:hintTextColor="@color/colorGrey"
+                android:hint="@string/password"
+                android:padding="5dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/tie_login_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@null"
+                    android:inputType="textPassword"
+                    android:paddingTop="4dp"
+                    android:singleLine="true"
+                    android:fontFamily="@font/gilroy_light"
+                    android:text="123456789"
+                    android:textColor="@color/lightBlack"
+                    android:textSize="16sp"></com.google.android.material.textfield.TextInputEditText>
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/colorLighWhite"
+            android:layout_marginEnd="10dp"
+
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Notifications"
+                android:textColor="@color/lightBlack"
+                android:textSize="16sp"
+                android:fontFamily="@font/gilroy_semibold"
+                android:background="@color/colorLighWhite"
+                android:textStyle="bold"></TextView>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:background="@color/colorLighWhite"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Sales"
+                    android:textColor="@color/lightBlack"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/gilroy_light"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"></TextView>
+
+                <Switch
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorLighWhite"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:checked="true"
+                    android:onClick="switchChange"
+                    app:layout_constraintVertical_bias="0.0"></Switch>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:text="New aarivals"
+                android:textColor="@color/lightBlack"
+                android:fontFamily="@font/gilroy_light"
+                android:background="@color/colorLighWhite"
+                android:textSize="14sp"
+                android:textStyle="normal"></TextView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:background="@color/colorLighWhite"
+                android:text="Delivery status changes"
+                android:textColor="@color/lightBlack"
+                android:textSize="14sp"
+                android:fontFamily="@font/gilroy_light"
+                android:layout_marginBottom="20dp"
+                android:textStyle="normal"></TextView>
+        </LinearLayout>
+    </LinearLayout>
+
+</ScrollView>

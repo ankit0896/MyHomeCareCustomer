@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_marginStart="12dp"
+    android:layout_height="wrap_content"
+>
+
+    <TextView
+        android:id="@+id/tv_favorites_custom_items"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/gilroy_light"
+        android:textColor="@color/colorWhite"
+        android:textAlignment="center"
+        android:background="@drawable/items_black_back"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:text="@string/apply"></TextView>
+
+</LinearLayout>

@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".view.fragment.AddToCartFragment">
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_addtocart_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_round_chevron_left_24"></ImageView>
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_addtocart_productName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/productName"
+                        android:fontFamily="@font/gilroy_semibold"
+                        android:textColor="@color/lightBlack"
+                        android:textSize="26sp"></TextView>
+
+                    <TextView
+                        android:id="@+id/tv_addtocart_brandName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/gilroy_semibold"
+                        android:text="@string/brandName"></TextView>
+
+                    <RatingBar
+                        android:id="@+id/rb_addtocart_ratingBar"
+                        style="@style/Widget.AppCompat.RatingBar.Small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"></RatingBar>
+
+                    <TextView
+                        android:id="@+id/tv_addtocart_startingfrom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/gilroy_light"
+                        android:text="@string/startingFrom"></TextView>
+
+
+                </LinearLayout>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/civ_addtocart"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:src="@drawable/model"></de.hdodenhof.circleimageview.CircleImageView>
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="10dp"
+                android:background="#c0c0c0" />
+
+
+            <LinearLayout
+                android:id="@+id/ll_addtocart_selectbrand"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/tv_addtoart_selectVendro_brand"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/selectBrand"
+                    android:fontFamily="@font/gilroy_semibold"
+                    android:textColor="@color/lightBlack"
+                    android:textSize="18dp"></TextView>
+
+                <TextView
+                    android:id="@+id/tv_addtocart_vendor_brandName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableRight="@drawable/ic_baseline_chevron_right_24"
+                    android:drawablePadding="10dp"
+                    android:text="@string/brandName"
+                    android:fontFamily="@font/gilroy_light"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/lightBlack"
+                    android:textSize="18dp"></TextView>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="10dp"
+                android:background="#c0c0c0" />
+
+
+            <LinearLayout
+                android:id="@+id/ll_addtocart_selectVendor"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/tv_addtoart_selectVendro_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/selectVendor"
+                    android:fontFamily="@font/gilroy_semibold"
+                    android:textColor="@color/lightBlack"
+                    android:textSize="18dp"></TextView>
+
+                <TextView
+                    android:id="@+id/tv_addtocart_vendor_number"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableRight="@drawable/ic_baseline_chevron_right_24"
+                    android:drawablePadding="10dp"
+                    android:text="@string/vendorNumber"
+                    android:fontFamily="@font/gilroy_light"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/lightBlack"
+                    android:textSize="18dp"></TextView>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="10dp"
+                android:background="#c0c0c0" />
+
+            <LinearLayout
+                android:id="@+id/ll_addtocart_selectSize"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/selectSize"
+                    android:fontFamily="@font/gilroy_semibold"
+                    android:textColor="@color/lightBlack"
+                    android:textSize="18dp"></TextView>
+
+                <TextView
+                    android:id="@+id/tv_addtocart_productSize"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:drawableRight="@drawable/ic_baseline_chevron_right_24"
+                    android:drawablePadding="10dp"
+                    android:text="@string/sizeLarge"
+                    android:textAlignment="textEnd"
+                    android:fontFamily="@font/gilroy_light"
+                    android:textColor="@color/lightBlack"
+                    android:textSize="18dp"></TextView>
+
+
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="10dp"
+                android:background="#c0c0c0" />
+
+            <LinearLayout
+                android:id="@+id/ll_addtocart_price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/pricetext"
+                    android:fontFamily="@font/gilroy_semibold"
+                    android:textColor="@color/lightBlack"
+                    android:textSize="18dp"></TextView>
+
+                <TextView
+                    android:id="@+id/tv_addtocart_price"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/gilroy_light"
+                    android:drawablePadding="10dp"
+                    android:text="@string/offerPrice"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/lightBlack"
+                    android:textSize="18dp"></TextView>
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="10dp"
+                android:background="#c0c0c0" />
+
+            <LinearLayout
+                android:id="@+id/ll_addtocart_offerprice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="10dp"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/gilroy_semibold"
+                    android:text="@string/offerPriceText"
+                    android:textColor="@color/lightBlack"
+                    android:textSize="18dp"></TextView>
+
+                <TextView
+                    android:id="@+id/tv_addtocart_offerPrice"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/gilroy_light"
+                    android:text="@string/offerPrice"
+                    android:textAlignment="textEnd"
+                    android:textColor="@color/lightBlack"
+                    android:textSize="18dp"></TextView>
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="10dp"
+                android:background="#c0c0c0" />
+
+            <TextView
+                android:id="@+id/tv_addtoCartButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginBottom="40dp"
+                android:background="@drawable/apply_back"
+                android:gravity="center"
+                android:padding="10dp"
+                android:fontFamily="@font/gilroy_semibold"
+                android:text="@string/addToCartAdd"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="@color/colorWhite" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
