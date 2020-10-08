@@ -14,7 +14,7 @@
         <ImageView
             android:layout_width="40dp"
             android:layout_height="40dp"
-            android:src="@drawable/avatar"></ImageView>
+            android:src="@drawable/men_1"></ImageView>
 
         <LinearLayout
             android:layout_width="wrap_content"
@@ -22,7 +22,7 @@
             android:layout_gravity="end">
 
             <ImageView
-                android:layout_width="40dp"
+                android:layout_width="34dp"
                 android:layout_height="40dp"
                 android:layout_marginEnd="10dp"
                 android:src="@drawable/ic_search_black_24"></ImageView>
@@ -38,7 +38,7 @@
                 android:layout_width="40dp"
                 android:layout_height="40dp"
                 android:layout_marginEnd="10dp"
-                android:src="@drawable/ic_shopping_cart_red_24"></ImageView>
+                android:src="@drawable/red_shopping_cart_24"></ImageView>
         </LinearLayout>
 
     </androidx.appcompat.widget.Toolbar>

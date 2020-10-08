@@ -80,7 +80,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="end"
             android:text="@string/viewall"
-            android:fontFamily="@font/gilroy_light"
+            android:fontFamily="@font/gilroy_semibold"
             android:textColor="@color/lightBlack"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"

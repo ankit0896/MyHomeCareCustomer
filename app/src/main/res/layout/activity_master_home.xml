@@ -19,7 +19,7 @@
             <ImageView
                 android:layout_width="40dp"
                 android:layout_height="40dp"
-                android:src="@drawable/avatar"></ImageView>
+                android:src="@drawable/men_1"></ImageView>
 
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -35,7 +35,7 @@
                     android:layout_width="40dp"
                     android:layout_height="40dp"
                     android:layout_marginEnd="10dp"
-                    android:src="@drawable/mastercart"></ImageView>
+                    android:src="@drawable/basket_1"></ImageView>
             </LinearLayout>
 
         </androidx.appcompat.widget.Toolbar>
@@ -92,28 +92,28 @@
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:src="@drawable/sales"></ImageView>
+                        android:src="@drawable/sales_1"></ImageView>
 
                     <ImageView
                         android:id="@+id/iv_hand"
                         android:layout_width="0dp"
                         android:layout_height="50dp"
                         android:layout_weight="1"
-                        android:src="@drawable/services"></ImageView>
+                        android:src="@drawable/service_1"></ImageView>
 
                     <ImageView
                         android:id="@+id/iv_food"
                         android:layout_width="0dp"
                         android:layout_height="50dp"
                         android:layout_weight="1"
-                        android:src="@drawable/grocery"></ImageView>
+                        android:src="@drawable/grocery_1"></ImageView>
 
                     <ImageView
                         android:id="@+id/iv_shopping_cart"
                         android:layout_width="0dp"
                         android:layout_height="50dp"
                         android:layout_weight="1"
-                        android:src="@drawable/cabtaxi"></ImageView>
+                        android:src="@drawable/taxi_1"></ImageView>
 
 
                     <ImageView
@@ -121,7 +121,7 @@
                         android:layout_width="0dp"
                         android:layout_height="50dp"
                         android:layout_weight="1"
-                        android:src="@drawable/restaurent"></ImageView>
+                        android:src="@drawable/food_1"></ImageView>
 
 
                 </LinearLayout>
@@ -139,7 +139,7 @@
                         android:fontFamily="@font/gilroy_semibold"
                         android:text="Sales"
                         android:textAlignment="center"
-                        android:textColor="@color/lightBlack"></TextView>
+                        android:textColor="@color/colorBlack"></TextView>
 
                     <TextView
                         android:layout_width="0dp"
@@ -148,7 +148,7 @@
                         android:fontFamily="@font/gilroy_semibold"
                         android:text="Services"
                         android:textAlignment="center"
-                        android:textColor="@color/lightBlack"></TextView>
+                        android:textColor="@color/colorBlack"></TextView>
 
                     <TextView
                         android:layout_width="0dp"
@@ -157,7 +157,7 @@
                         android:fontFamily="@font/gilroy_semibold"
                         android:text="Grocery"
                         android:textAlignment="center"
-                        android:textColor="@color/lightBlack"></TextView>
+                        android:textColor="@color/colorBlack"></TextView>
 
                     <TextView
                         android:layout_width="0dp"
@@ -166,7 +166,7 @@
                         android:fontFamily="@font/gilroy_semibold"
                         android:text="@string/cabtaxi"
                         android:textAlignment="center"
-                        android:textColor="@color/lightBlack"></TextView>
+                        android:textColor="@color/colorBlack"></TextView>
 
                     <TextView
                         android:layout_width="0dp"
@@ -175,7 +175,7 @@
                         android:fontFamily="@font/gilroy_semibold"
                         android:text="Food"
                         android:textAlignment="center"
-                        android:textColor="@color/lightBlack"></TextView>
+                        android:textColor="@color/colorBlack"></TextView>
                 </LinearLayout>
 
                 <androidx.constraintlayout.widget.ConstraintLayout

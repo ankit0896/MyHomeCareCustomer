@@ -301,7 +301,7 @@
                         android:id="@+id/tv_rating_reviews_number"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
-                        android:layout_weight="3.5"
+                        android:layout_weight="3"
                         android:fontFamily="@font/gilroy_semibold"
                         android:text="@string/reviews"
                         android:textColor="@color/lightBlack"
@@ -311,7 +311,8 @@
                     <LinearLayout
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
-                        android:layout_weight="1.5">
+                        android:layout_weight="2"
+                        android:gravity="right">
 
                         <CheckBox
                             android:id="@+id/cb_rating_review_withphoto"
@@ -342,7 +343,10 @@
 
             </LinearLayout>
 
-
+            <com.google.android.material.floatingactionbutton.FloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/colorRed"></com.google.android.material.floatingactionbutton.FloatingActionButton>
         </FrameLayout>
     </LinearLayout>
 
